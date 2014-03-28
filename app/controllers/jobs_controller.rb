@@ -28,10 +28,8 @@ class JobsController < ApplicationController
     if !(rufus_id = JobScheduler.schedule(@job)).nil?
       @job.update(active: true)
       @job.update(rufus_id: rufus_id)
-      flash[:success] = "Job successfully restarted"
-      redirect_to "/jobs"
+      redirect_to "/inactive"
     else
-      flash[:error] = "Job could not be restarted"
       redirect_to "/inactive"
     end
   end
