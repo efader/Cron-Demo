@@ -4,7 +4,7 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all
+    @jobs = Job.all(:conditions => {:active => true})
   end
 
   # GET /jobs/1
@@ -16,6 +16,26 @@ class JobsController < ApplicationController
   def new
     @job = Job.new
   end
+
+
+  def inactive
+    @jobs = Job.all(:conditions => {:active => false})
+  end
+
+  # restart an inactive job
+  def restart
+    @job = Job.find(params[:job])
+    if !(rufus_id = JobScheduler.schedule(@job)).nil?
+      @job.update(active: true)
+      @job.update(rufus_id: rufus_id)
+      flash[:success] = "Job successfully restarted"
+      redirect_to "/jobs"
+    else
+      flash[:error] = "Job could not be restarted"
+      redirect_to "/inactive"
+    end
+  end
+
 
   # POST /jobs
   # POST /jobs.json

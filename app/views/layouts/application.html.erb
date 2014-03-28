@@ -7,6 +7,12 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
+	<% if flash[:error] %>
+	<div class="flash error"><%= flash[:error] %></div>
+	<% end %>
+	<% if flash[:success] %>
+	<div class="flash success"><%= flash[:sucess] %></div>
+	<% end %>
 	<%= render "layouts/nav_bar" %>
 	<div class="container">
 		<%= yield %>
