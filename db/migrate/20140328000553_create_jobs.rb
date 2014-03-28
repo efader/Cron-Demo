@@ -5,7 +5,8 @@ class CreateJobs < ActiveRecord::Migration
       t.string :command
       t.string :cron_input
       t.string :rufus_id
-      
+      t.boolean :active
+
       t.timestamps
     end
   end

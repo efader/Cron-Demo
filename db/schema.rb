@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20140328000736) do
 
   create_table "job_histories", force: true do |t|
     t.boolean  "success"
-    t.datetime "scheduled_time"
     t.integer  "job_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -26,6 +25,7 @@ ActiveRecord::Schema.define(version: 20140328000736) do
     t.string   "command"
     t.string   "cron_input"
     t.string   "rufus_id"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

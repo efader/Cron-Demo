@@ -20,7 +20,7 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params)
+    @job = Job.new(job_params, active: true)
     respond_to do |format|
       if !(rufus_id = JobScheduler.schedule(@job.title, @job.command, @job.cron_input)).nil? && @job.save
         @job.update(rufus_id: rufus_id)

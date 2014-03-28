@@ -1,6 +1,7 @@
 CronDemo::Application.routes.draw do
   resources :jobs
 
+  get "/history" => "jobs#history"
   post "jobs/new"
 
   # The priority is based upon order of creation: first created -> highest priority.
