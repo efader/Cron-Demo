@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Command name:</strong>
+  <%= @job.title %>
+</p>
+
+<p>
+  <strong>Command name:</strong>
+  <%= @job.command %>
+</p>
+
+<p>
+  <strong>Cron input:</strong>
+  <%= @job.cron_input %>
+</p>
+
+<%= link_to 'Back', jobs_path, class: "btn btn-xs" %>

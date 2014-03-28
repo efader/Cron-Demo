@@ -1,0 +1,22 @@
+<h1>Current / Upcoming Jobs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Command</th>
+      <th>Cron input</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @history.each do |past_job| %>
+      <% job = Job.find(past_job.job_id) %>
+    <tr>
+      <td><%= job.title %></td>
+      <td><%= job.command %></td>
+      <td><%= job.cron_input %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

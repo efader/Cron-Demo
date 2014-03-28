@@ -1,0 +1,29 @@
+<h1>Current / Upcoming Jobs</h1>
+
+<table class= "table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Command</th>
+      <th>Cron input</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+    <tr>
+      <td><%= job.title %></td>
+      <td><%= job.command %></td>
+      <td><%= job.cron_input %></td>
+      <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+      <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= button_to 'New Job', new_job_path , class: "btn btn-primary btn-lg" %>

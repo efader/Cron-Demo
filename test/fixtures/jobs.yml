@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  command_name: MyString
+  cron_input: MyString
+
+two:
+  command_name: MyString
+  cron_input: MyString
