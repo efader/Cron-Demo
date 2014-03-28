@@ -1,4 +1,4 @@
-<h1>Current Jobs</h1>
+<h1>Inactive Jobs</h1>
 
 <table class= "table table-striped">
   <thead>
@@ -19,7 +19,7 @@
       <td><%= job.command %></td>
       <td><%= job.next_time %></td>
       <td><%= job.cron_input %></td>
-      <td><%= button_to 'Cancel', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+      <td><%= button_to 'Restart', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
     </tr>
     <% end %>
     <% end %>

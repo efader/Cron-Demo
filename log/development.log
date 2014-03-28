@@ -12357,3 +12357,3894 @@ Processing by JobsController#index as HTML
   Rendered jobs/index.html.erb within layouts/application (3.7ms)
   Rendered layouts/_nav_bar.html.erb (0.1ms)
 Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 11:57:20 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (18.7ms)
+  Rendered jobs/new.html.erb within layouts/application (23.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 122ms (Views: 95.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:21 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"steve", "command"=>"bob", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'steve' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('bob', '2014-03-28 15:57:27', '* * * * *', 'steve', '2014-03-28 15:57:27')
+  [1m[36m (82.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'steve' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396022247.3127234_800304474090104642', `updated_at` = '2014-03-28 15:57:27' WHERE `jobs`.`id` = 5
+  [1m[36m (51.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'steve' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 15:57:27' WHERE `jobs`.`id` = 5
+  [1m[36m (43.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs/5
+Completed 302 Found in 217ms (ActiveRecord: 181.5ms)
+
+
+Started GET "/jobs/5" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1
+  Rendered jobs/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 16.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 11:57:27 -0400
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 15:58:00', 5, 1, '2014-03-28 15:58:00')
+  [1m[36m (81.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 15:59:00', 5, 1, '2014-03-28 15:59:00')[0m
+  [1m[35m (41.0ms)[0m  COMMIT
+
+
+Started GET "/jobs/5" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1
+  Rendered jobs/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 117ms (Views: 76.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:24 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 11:59:27 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.7ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (14.1ms)
+  Rendered jobs/new.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:28 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"pork", "command"=>"rinds", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'pork' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('rinds', '2014-03-28 15:59:36', '* * * * *', 'pork', '2014-03-28 15:59:36')
+  [1m[36m (88.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'pork' AND `jobs`.`id` != 6) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396022376.1619086_4073492569988975715', `updated_at` = '2014-03-28 15:59:36' WHERE `jobs`.`id` = 6
+  [1m[36m (51.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'pork' AND `jobs`.`id` != 6) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 15:59:36' WHERE `jobs`.`id` = 6
+  [1m[36m (38.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs/6
+Completed 302 Found in 208ms (ActiveRecord: 182.6ms)
+
+
+Started GET "/jobs/6" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 6 LIMIT 1
+  Rendered jobs/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 11:59:45 -0400
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:00:00', 6, 1, '2014-03-28 16:00:00')
+  [1m[36m (41.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:01:00', 6, 1, '2014-03-28 16:01:00')[0m
+  [1m[35m (44.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:02:00', 6, 1, '2014-03-28 16:02:00')
+  [1m[36m (41.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:03:00', 6, 1, '2014-03-28 16:03:00')[0m
+  [1m[35m (28.6ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:04:00', 6, 1, '2014-03-28 16:04:00')
+  [1m[36m (47.7ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:04:14 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `next_time' for nil:NilClass):
+    18:     <tr>
+    19:       <td><%= job.title %></td>
+    20:       <td><%= job.command %></td>
+    21:       <td><%= JobScheduler.find_next(job) %></td>
+    22:       <td><%= job.cron_input %></td>
+    23:       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+    24:       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+  app/models/job_scheduler.rb:41:in `find_next'
+  app/views/jobs/index.html.erb:21:in `block in _app_views_jobs_index_html_erb__3517710664595877267_33096200'
+  app/views/jobs/index.html.erb:16:in `_app_views_jobs_index_html_erb__3517710664595877267_33096200'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.1ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:04:14 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `next_time' for nil:NilClass):
+    18:     <tr>
+    19:       <td><%= job.title %></td>
+    20:       <td><%= job.command %></td>
+    21:       <td><%= JobScheduler.find_next(job) %></td>
+    22:       <td><%= job.cron_input %></td>
+    23:       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+    24:       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+  app/models/job_scheduler.rb:41:in `find_next'
+  app/views/jobs/index.html.erb:21:in `block in _app_views_jobs_index_html_erb__3517710664595877267_30764140'
+  app/views/jobs/index.html.erb:16:in `_app_views_jobs_index_html_erb__3517710664595877267_30764140'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:04:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (16.8ms)
+Completed 500 Internal Server Error in 48ms
+
+ActionView::Template::Error (undefined method `next_time' for nil:NilClass):
+    18:     <tr>
+    19:       <td><%= job.title %></td>
+    20:       <td><%= job.command %></td>
+    21:       <td><%= JobScheduler.find_next(job) %></td>
+    22:       <td><%= job.cron_input %></td>
+    23:       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+    24:       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+  app/models/job_scheduler.rb:41:in `find_next'
+  app/views/jobs/index.html.erb:21:in `block in _app_views_jobs_index_html_erb__4467148594187569102_32870500'
+  app/views/jobs/index.html.erb:16:in `_app_views_jobs_index_html_erb__4467148594187569102_32870500'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.4ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:05:46 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.7ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined method `next_time' for nil:NilClass):
+    18:     <tr>
+    19:       <td><%= job.title %></td>
+    20:       <td><%= job.command %></td>
+    21:       <td><%= JobScheduler.find_next(job) %></td>
+    22:       <td><%= job.cron_input %></td>
+    23:       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+    24:       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+  app/models/job_scheduler.rb:39:in `find_next'
+  app/views/jobs/index.html.erb:21:in `block in _app_views_jobs_index_html_erb__4467148594187569102_32870500'
+  app/views/jobs/index.html.erb:16:in `_app_views_jobs_index_html_erb__4467148594187569102_32870500'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:06:08 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `next_time' for nil:NilClass):
+    18:     <tr>
+    19:       <td><%= job.title %></td>
+    20:       <td><%= job.command %></td>
+    21:       <td><%= JobScheduler::find_next(job) %></td>
+    22:       <td><%= job.cron_input %></td>
+    23:       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+    24:       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+  app/models/job_scheduler.rb:39:in `find_next'
+  app/views/jobs/index.html.erb:21:in `block in _app_views_jobs_index_html_erb__4467148594187569102_32526160'
+  app/views/jobs/index.html.erb:16:in `_app_views_jobs_index_html_erb__4467148594187569102_32526160'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:09:34 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `find_next' for #<#<Class:0x00000003f46bd8>:0x00000003f459b8>):
+    18:     <tr>
+    19:       <td><%= job.title %></td>
+    20:       <td><%= job.command %></td>
+    21:       <td><%= find_next(job) %></td>
+    22:       <td><%= job.cron_input %></td>
+    23:       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+    24:       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+  app/views/jobs/index.html.erb:21:in `block in _app_views_jobs_index_html_erb__4467148594187569102_33161080'
+  app/views/jobs/index.html.erb:16:in `_app_views_jobs_index_html_erb__4467148594187569102_33161080'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+  [1m[36m (152.7ms)[0m  [1mDROP DATABASE IF EXISTS `cron-demo_development`[0m
+  [1m[35m (0.8ms)[0m  DROP DATABASE IF EXISTS `cron-demo_test`
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE `cron-demo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `cron-demo_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (90.2ms)[0m  [1mCREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (97.2ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (105.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (199.6ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (40.9ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140328000736')
+  [1m[36m (41.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140328000553')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateJobHistories (20140328000736)
+  [1m[36m (61.8ms)[0m  [1mDROP TABLE `job_histories`[0m
+  [1m[35mSQL (45.8ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140328000736'
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateJobs (20140328000553)
+  [1m[36m (70.1ms)[0m  [1mDROP TABLE `jobs`[0m
+  [1m[35mSQL (37.0ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140328000553'
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateJobs (20140328000553)
+  [1m[35m (123.6ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `next` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140328000553')
+  [1m[36m (41.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateJobHistories (20140328000736)
+  [1m[35m (99.4ms)[0m  CREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140328000736')
+  [1m[36m (37.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:28:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 102ms (Views: 77.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:00 -0400
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:29:01 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (20.7ms)
+  Rendered jobs/new.html.erb within layouts/application (22.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:02 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey", "command"=>"monkey", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.4ms)[0m  SELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey', '2014-03-28 16:29:11', '* * * * *', 'monkey', '2014-03-28 16:29:11')[0m
+  [1m[35m (88.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396024151.2542253_4151498882840127093', `updated_at` = '2014-03-28 16:29:11' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (47.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.5ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:29:11' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (44.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 224ms (ActiveRecord: 184.5ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:29:11 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:29:13 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_nav_bar.html.erb (1.0ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:30:00', 1, 1, '2014-03-28 16:30:00')
+  [1m[36m (46.2ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:30:37 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.4ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/history.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:31:00', 1, 1, '2014-03-28 16:31:00')[0m
+  [1m[35m (61.2ms)[0m  COMMIT
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:31:04 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.6ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/history.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:31:05 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:31:28 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:32:00', 1, 1, '2014-03-28 16:32:00')
+  [1m[36m (61.6ms)[0m  [1mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateJobHistories (20140328000736)
+  [1m[36m (67.2ms)[0m  [1mDROP TABLE `job_histories`[0m
+  [1m[35mSQL (45.6ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140328000736'
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+Migrating to CreateJobs (20140328000553)
+  [1m[36m (86.9ms)[0m  [1mDROP TABLE `jobs`[0m
+  [1m[35mSQL (36.8ms)[0m  DELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140328000553'
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateJobs (20140328000553)
+  [1m[35m (119.8ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `next` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140328000553')
+  [1m[36m (39.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateJobHistories (20140328000736)
+  [1m[35m (99.4ms)[0m  CREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140328000736')
+  [1m[36m (37.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:32:37 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 107ms (Views: 80.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:38 -0400
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (22.4ms)
+  Rendered jobs/new.html.erb within layouts/application (24.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:40 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey", "command"=>"monkey", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.4ms)[0m  SELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey', '2014-03-28 16:32:50', '* * * * *', 'monkey', '2014-03-28 16:32:50')[0m
+  [1m[35m (102.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396024370.2664306_3438617734955663125', `updated_at` = '2014-03-28 16:32:50' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (100.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.7ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:32:50' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (58.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 298ms (ActiveRecord: 265.9ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:32:50 -0400
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:33:00', 1, 1, '2014-03-28 16:33:00')[0m
+  [1m[35m (97.2ms)[0m  COMMIT
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:33:12 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.3ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.7ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:33:13 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (111.3ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (182.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateJobs (20140328000553)
+  [1m[35m (99.3ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `next_time` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140328000553')
+  [1m[36m (40.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateJobHistories (20140328000736)
+  [1m[35m (106.1ms)[0m  CREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140328000736')
+  [1m[36m (45.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 102ms (Views: 76.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:04 -0400
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (22.5ms)
+  Rendered jobs/new.html.erb within layouts/application (24.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:06 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:35:11 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey", "command"=>"monkey", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.4ms)[0m  SELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey', '2014-03-28 16:35:11', '* * * * *', 'monkey', '2014-03-28 16:35:11')[0m
+  [1m[35m (71.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396024511.9792213_2226361539799159509', `updated_at` = '2014-03-28 16:35:11' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (58.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.3ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:35:12' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (47.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 208ms (ActiveRecord: 180.3ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:12 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:35:40 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `next' for #<Job:0x00000000d2f668>):
+    18:     <tr>
+    19:       <td><%= job.title %></td>
+    20:       <td><%= job.command %></td>
+    21:       <td><%= job.next %></td>
+    22:       <td><%= job.cron_input %></td>
+    23:       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+    24:       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+  app/views/jobs/index.html.erb:21:in `block in _app_views_jobs_index_html_erb__1539301575748417361_7220100'
+  app/views/jobs/index.html.erb:16:in `_app_views_jobs_index_html_erb__1539301575748417361_7220100'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:35:40 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `next' for #<Job:0x00000002b3bf80>):
+    18:     <tr>
+    19:       <td><%= job.title %></td>
+    20:       <td><%= job.command %></td>
+    21:       <td><%= job.next %></td>
+    22:       <td><%= job.cron_input %></td>
+    23:       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
+    24:       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
+  app/views/jobs/index.html.erb:21:in `block in _app_views_jobs_index_html_erb__1539301575748417361_21376080'
+  app/views/jobs/index.html.erb:16:in `_app_views_jobs_index_html_erb__1539301575748417361_21376080'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:35:50 -0400
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:36:00', 1, 1, '2014-03-28 16:36:00')
+  [1m[36m (69.2ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:36:03 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:04 -0400
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:36:05 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.3ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_nav_bar.html.erb (1.1ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.4ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:08 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:36:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (13.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 111ms (Views: 85.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (14.0ms)
+  Rendered jobs/new.html.erb within layouts/application (17.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:41 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey2", "command"=>"monkey2", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.3ms)[0m  SELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey2' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey2', '2014-03-28 16:36:49', '* * * * *', 'monkey2', '2014-03-28 16:36:49')[0m
+  [1m[35m (115.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.9ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey2' AND `jobs`.`id` != 2) LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396024609.170861_1420008600414841886', `updated_at` = '2014-03-28 16:36:49' WHERE `jobs`.`id` = 2[0m
+  [1m[35m (48.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.9ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey2' AND `jobs`.`id` != 2) LIMIT 1
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:36:49' WHERE `jobs`.`id` = 2[0m
+  [1m[35m (51.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs/2
+Completed 302 Found in 255ms (ActiveRecord: 220.3ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mJob Load (0.7ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  Rendered jobs/show.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 31.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:36:49 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:36:59 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:37:00', 2, 1, '2014-03-28 16:37:00')
+  [1m[36m (64.2ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:37:02 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:37:03 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.6ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/history.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:37:04 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:37:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.6ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mJob Load (0.9ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 130ms (Views: 100.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:46 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:47 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:37:48 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.8ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (14.1ms)
+  Rendered jobs/new.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:37:49 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey4", "command"=>"monkey4", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey4' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey4', '2014-03-28 16:38:02', '* * * * *', 'monkey4', '2014-03-28 16:38:02')
+  [1m[36m (94.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey4' AND `jobs`.`id` != 3) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396024682.2053163_414212353254544817', `updated_at` = '2014-03-28 16:38:02' WHERE `jobs`.`id` = 3
+  [1m[36m (51.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey4' AND `jobs`.`id` != 3) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:38:02' WHERE `jobs`.`id` = 3
+  [1m[36m (41.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs/3
+Completed 302 Found in 229ms (ActiveRecord: 191.7ms)
+
+
+Started GET "/jobs/3" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1
+  Rendered jobs/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:02 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:38:05 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:38:23 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.4ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:38:25 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.5ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/history.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.3ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:38:27 -0400
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:39:00', 3, 1, '2014-03-28 16:39:00')
+  [1m[36m (59.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:39:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.8ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (17.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 118ms (Views: 91.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:36 -0400
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (14.8ms)
+  Rendered jobs/new.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:39:38 -0400
+  [1m[36m (146.8ms)[0m  [1mDROP DATABASE IF EXISTS `cron-demo_development`[0m
+  [1m[35m (0.8ms)[0m  DROP DATABASE IF EXISTS `cron-demo_test`
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE `cron-demo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.3ms)[0m  CREATE DATABASE `cron-demo_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (101.3ms)[0m  [1mCREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (97.0ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `next_time` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (97.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (191.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (48.2ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140328000736')
+  [1m[36m (41.6ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140328000553')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:40:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey", "command"=>"monkey", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey', '2014-03-28 16:40:17', '* * * * *', 'monkey', '2014-03-28 16:40:17')
+  [1m[36m (41.3ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 99ms
+
+NoMethodError (undefined method `next_time' for nil:NilClass):
+  app/models/job_scheduler.rb:40:in `find_next'
+  app/models/job_scheduler.rb:20:in `schedule'
+  app/controllers/jobs_controller.rb:27:in `block in create'
+  app/controllers/jobs_controller.rb:25:in `create'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.7ms)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:41:00', 1, 1, '2014-03-28 16:41:00')[0m
+  [1m[35m (59.8ms)[0m  COMMIT
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:41:36 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey", "command"=>"monkey", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.7ms)[0m  SELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered jobs/_form.html.erb (8.5ms)
+  Rendered jobs/new.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 112ms (Views: 82.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:41:37 -0400
+  [1m[36m (162.4ms)[0m  [1mDROP DATABASE IF EXISTS `cron-demo_development`[0m
+  [1m[35m (0.9ms)[0m  DROP DATABASE IF EXISTS `cron-demo_test`
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE `cron-demo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `cron-demo_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (85.7ms)[0m  [1mCREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (96.5ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `next_time` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (97.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (199.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (47.8ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140328000736')
+  [1m[36m (41.1ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140328000553')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey", "command"=>"monkey", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey', '2014-03-28 16:42:00', '* * * * *', 'monkey', '2014-03-28 16:42:00')
+  [1m[36m (59.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:43:00', `updated_at` = '2014-03-28 16:42:00' WHERE `jobs`.`id` = 1
+  [1m[36m (45.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396024920.5306797_1672690655741188898', `updated_at` = '2014-03-28 16:42:00' WHERE `jobs`.`id` = 1
+  [1m[36m (37.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:42:00' WHERE `jobs`.`id` = 1
+  [1m[36m (46.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 266ms (ActiveRecord: 196.0ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 76.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:01 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:01 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:01 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:01 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:42:02 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.9ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (19.2ms)
+  Rendered jobs/new.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 125ms (Views: 98.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:31 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:42:40 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"walrus", "command"=>"walrus", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'walrus' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('walrus', '2014-03-28 16:42:40', '* * * * *', 'walrus', '2014-03-28 16:42:40')
+  [1m[36m (89.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:43:00', `updated_at` = '2014-03-28 16:42:41' WHERE `jobs`.`id` = 2
+  [1m[36m (53.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396024960.998375_2105981276173707774', `updated_at` = '2014-03-28 16:42:41' WHERE `jobs`.`id` = 2
+  [1m[36m (38.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:42:41' WHERE `jobs`.`id` = 2
+  [1m[36m (52.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs/2
+Completed 302 Found in 271ms (ActiveRecord: 237.6ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:42:41 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:42:53 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.7ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:43:00', 2, 1, '2014-03-28 16:43:00')[0m
+  [1m[35m (62.7ms)[0m  COMMIT
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:43:01 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.7ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:43:02 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:43:03 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.3ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:43:04 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (118.9ms)[0m  [1mDROP DATABASE IF EXISTS `cron-demo_development`[0m
+  [1m[35m (0.9ms)[0m  DROP DATABASE IF EXISTS `cron-demo_test`
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE `cron-demo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `cron-demo_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (105.5ms)[0m  [1mCREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (104.7ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `next_time` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (103.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (216.5ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36m (0.7ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (47.9ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140328000736')
+  [1m[36m (41.3ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140328000553')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 103ms (Views: 77.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:47 -0400
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (21.8ms)
+  Rendered jobs/new.html.erb within layouts/application (23.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 33.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:49 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:43:56 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey", "command"=>"monkey", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey', '2014-03-28 16:43:56', '* * * * *', 'monkey', '2014-03-28 16:43:56')[0m
+  [1m[35m (93.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.7ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-28 16:44:00', `updated_at` = '2014-03-28 16:43:56' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (50.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396025036.658484_1962250181610603599', `updated_at` = '2014-03-28 16:43:56' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (43.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:43:56' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (46.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 283ms (ActiveRecord: 240.3ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2014-03-28 12:43:56 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.7ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:43:57 -0400
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:45:00', `updated_at` = '2014-03-28 16:44:00' WHERE `jobs`.`id` = 1
+  [1m[36m (69.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:44:00', 1, 1, '2014-03-28 16:44:00')[0m
+  [1m[35m (45.4ms)[0m  COMMIT
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:44:09 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:44:13 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.4ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/history.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:44:15 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:44:19 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.3ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:44:19 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:44:29 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.4ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/history.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:44:33 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:44:36 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.3ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:44:37 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:46:00', `updated_at` = '2014-03-28 16:45:00' WHERE `jobs`.`id` = 1
+  [1m[36m (65.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:45:00', 1, 1, '2014-03-28 16:45:00')[0m
+  [1m[35m (53.7ms)[0m  COMMIT
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:45:02 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:45:04 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.3ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered jobs/history.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:45:09 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:45:10 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.3ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered jobs/history.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:45:11 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:45:13 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.3ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  Rendered jobs/history.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-28 16:47:00', `updated_at` = '2014-03-28 16:46:00' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (67.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:46:00', 1, 1, '2014-03-28 16:46:00')
+  [1m[36m (39.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:48:00', `updated_at` = '2014-03-28 16:47:00' WHERE `jobs`.`id` = 1
+  [1m[36m (79.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:47:00', 1, 1, '2014-03-28 16:47:00')[0m
+  [1m[35m (37.4ms)[0m  COMMIT
+  [1m[36m (168.5ms)[0m  [1mDROP DATABASE IF EXISTS `cron-demo_development`[0m
+  [1m[35m (0.9ms)[0m  DROP DATABASE IF EXISTS `cron-demo_test`
+  [1m[36m (0.5ms)[0m  [1mCREATE DATABASE `cron-demo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `cron-demo_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (106.8ms)[0m  [1mCREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (98.1ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `next_time` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (89.5ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (191.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36m (0.7ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (39.3ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140328000736')
+  [1m[36m (41.4ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140328000553')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:47:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.8ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 102ms (Views: 77.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (21.0ms)
+  Rendered jobs/new.html.erb within layouts/application (22.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.6ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:26 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"monkey", "command"=>"monkey", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.3ms)[0m  SELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'monkey' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('monkey', '2014-03-28 16:47:32', '* * * * *', 'monkey', '2014-03-28 16:47:32')[0m
+  [1m[35m (90.2ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-28 16:48:00', `updated_at` = '2014-03-28 16:47:32' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (50.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.4ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396025252.4008677_117032367501201710', `updated_at` = '2014-03-28 16:47:32' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (38.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:47:32' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (38.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs/1
+Completed 302 Found in 258ms (ActiveRecord: 223.0ms)
+
+
+Started GET "/jobs/1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  Rendered jobs/show.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:47:32 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:47:40 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-28 16:49:00', `updated_at` = '2014-03-28 16:48:00' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (68.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:48:00', 1, 1, '2014-03-28 16:48:00')
+  [1m[36m (36.0ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:48:15 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:48:19 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.3ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  Rendered jobs/history.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:48:22 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (3.4ms)
+  Rendered jobs/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:26 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"walrus", "command"=>"walrus", "cron_input"=>"* * * * *"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'walrus' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('walrus', '2014-03-28 16:48:33', '* * * * *', 'walrus', '2014-03-28 16:48:33')
+  [1m[36m (106.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:49:00', `updated_at` = '2014-03-28 16:48:33' WHERE `jobs`.`id` = 2
+  [1m[36m (45.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396025313.1311326_117032367501201710', `updated_at` = '2014-03-28 16:48:33' WHERE `jobs`.`id` = 2
+  [1m[36m (63.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-28 16:48:33' WHERE `jobs`.`id` = 2
+  [1m[36m (38.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs/2
+Completed 302 Found in 281ms (ActiveRecord: 258.7ms)
+
+
+Started GET "/jobs/2" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+Processing by JobsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  Rendered jobs/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:33 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:48:35 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (4.1ms)
+  Rendered jobs/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:37 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"rufus", "command"=>"rufus", "cron_input"=>"rufus"}, "commit"=>"Create Job"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'rufus' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('rufus', '2014-03-28 16:48:47', 'rufus', 'rufus', '2014-03-28 16:48:47')
+  [1m[36m (129.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM `jobs` WHERE `jobs`.`id` = 3[0m
+  [1m[35m (52.0ms)[0m  COMMIT
+  Rendered jobs/_form.html.erb (3.0ms)
+  Rendered jobs/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 206ms (Views: 13.6ms | ActiveRecord: 183.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:48:47 -0400
+  [1m[36m (1.7ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.5ms)[0m  BEGIN
+  [1m[36mJob Exists (2.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mJob Exists (2.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-28 16:50:00', `updated_at` = '2014-03-28 16:49:00' WHERE `jobs`.`id` = 1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:50:00', `updated_at` = '2014-03-28 16:49:00' WHERE `jobs`.`id` = 2
+  [1m[36m (63.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:49:00', 1, 1, '2014-03-28 16:49:00')[0m
+  [1m[35m (104.6ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:49:00', 2, 1, '2014-03-28 16:49:00')
+  [1m[36m (78.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (87.1ms)[0m  COMMIT
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:49:05 -0400
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:49:07 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.3ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/history.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:49:09 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:49:17 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:49:20 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.3ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/history.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:49:21 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (1.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (2.1ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mJob Exists (0.7ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1
+  [1m[36mSQL (1.7ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-28 16:51:00', `updated_at` = '2014-03-28 16:50:00' WHERE `jobs`.`id` = 1[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:51:00', `updated_at` = '2014-03-28 16:50:00' WHERE `jobs`.`id` = 2
+  [1m[36m (60.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:50:00', 1, 1, '2014-03-28 16:50:00')[0m
+  [1m[35m (101.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:50:00', 2, 1, '2014-03-28 16:50:00')
+  [1m[36m (80.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (79.8ms)[0m  COMMIT
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:50:17 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (2.8ms)
+  Rendered jobs/new.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:18 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-28 12:50:21 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: job):
+  app/controllers/jobs_controller.rb:81:in `job_params'
+  app/controllers/jobs_controller.rb:23:in `create'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:23 -0400
+
+
+Started DELETE "/jobs/2" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "id"=>"2"}
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.3ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `jobs` SET `active` = 0, `updated_at` = '2014-03-28 16:50:31' WHERE `jobs`.`id` = 2[0m
+  [1m[35m (63.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 72ms (ActiveRecord: 66.2ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:50:31 -0400
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:52:00', `updated_at` = '2014-03-28 16:51:00' WHERE `jobs`.`id` = 1
+  [1m[36m (64.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:51:00', 1, 1, '2014-03-28 16:51:00')[0m
+  [1m[35m (39.3ms)[0m  COMMIT
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:51:22 -0400
+Processing by JobsController#history as HTML
+  [1m[36mJobHistory Load (0.4ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  [1m[36mJob Load (0.8ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/history.html.erb within layouts/application (40.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 54ms (Views: 45.4ms | ActiveRecord: 6.2ms)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mJob Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:53:00', `updated_at` = '2014-03-28 16:52:00' WHERE `jobs`.`id` = 1
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:52:00 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+  [1m[35m (89.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:52:00', 1, 1, '2014-03-28 16:52:00')
+  [1m[36m (42.6ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-28 12:52:01 -0400
+Processing by JobsController#history as HTML
+  [1m[35mJobHistory Load (0.3ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  Rendered jobs/history.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:52:04 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/jobs/1" for 127.0.0.1 at 2014-03-28 12:52:09 -0400
+
+ActionController::RoutingError (No route matches [POST] "/jobs/1"):
+  actionpack (4.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.0.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.0.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.4) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.4) lib/rails/engine.rb:511:in `call'
+  railties (4.0.4) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/evan/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/evan/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/evan/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/actionpack-4.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (26.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:52:44 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:52:45 -0400
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (1.4ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:54:00', `updated_at` = '2014-03-28 16:53:00' WHERE `jobs`.`id` = 1
+  [1m[36m (106.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:53:00', 1, 1, '2014-03-28 16:53:00')[0m
+  [1m[35m (45.8ms)[0m  COMMIT
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:53:05 -0400
+Processing by JobsController#index as HTML
+  [1m[36mJob Load (0.7ms)[0m  [1mSELECT `jobs`.* FROM `jobs`[0m
+  Rendered jobs/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+Processing by JobsController#index as HTML
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs`
+  Rendered jobs/index.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-28 12:53:51 -0400
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (1.0ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-28 16:55:00', `updated_at` = '2014-03-28 16:54:00' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (64.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:54:00', 1, 1, '2014-03-28 16:54:00')
+  [1m[36m (37.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-28 16:56:00', `updated_at` = '2014-03-28 16:55:00' WHERE `jobs`.`id` = 1
+  [1m[36m (345.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-28 16:55:00', 1, 1, '2014-03-28 16:55:00')[0m
+  [1m[35m (45.5ms)[0m  COMMIT

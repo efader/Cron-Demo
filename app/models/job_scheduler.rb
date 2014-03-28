@@ -8,17 +8,22 @@ class JobScheduler
 	# added to the database if this is successful
 	# link the job to the rufus_id using the return
 	def self.schedule(job)
+		begin # the controller will delete the object if this returns nil
 			cron_id = @@rscheduler.cron job.cron_input do
-				begin
+				begin # the only reason this should be false is an error, right?
 					# Run the command, but puts for now
 					puts job.command
+					job.update(next_time: find_next(cron_id))
 					JobHistory.create(success: true, job_id: job.id)
 				rescue
 					JobHistory.create(success: false, job_id: job.id)
 				end
 			end
+			job.update(next_time: find_next(cron_id))
 			return cron_id
-
+		rescue
+			return nil
+		end
 		#rescue false # in case of bad cron inputs
 	end
 
@@ -33,6 +38,10 @@ class JobScheduler
 		else
 			puts "Could not find cron job"
 		end
+	end
+
+	def self.find_next(job_id)
+		return @@rscheduler.job(job_id).next_time
 	end
 
 end
