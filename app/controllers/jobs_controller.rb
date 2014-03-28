@@ -21,12 +21,12 @@ class JobsController < ApplicationController
   # POST /jobs.json
   def create
     @job = Job.new(job_params)
-    @job.update(active: true)
 
     respond_to do |format|
       if @job.save
-        if !(rufus_id = JobScheduler.schedule(@job.title, @job.command, @job.cron_input)).nil? 
+        if !(rufus_id = JobScheduler.schedule(@job)).nil? 
           @job.update(rufus_id: rufus_id)
+          @job.update(active: true)
           format.html { redirect_to @job, notice: 'Job was successfully scheduled.' }
           format.json { render action: 'show', status: :created, location: @job }
         else

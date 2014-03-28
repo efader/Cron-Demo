@@ -7,13 +7,18 @@ class JobScheduler
 	# This runs BEFORE initializing a new Job. Jobs should only be
 	# added to the database if this is successful
 	# link the job to the rufus_id using the return
-	def self.schedule(title, command, time)
-		job_id = @@rscheduler.cron time do
-			# Run the command, but puts for now
-			puts command
-			JobHistory.create(success: true, job_id: Job.where(title: title).first.id)
-		end
-		return job_id
+	def self.schedule(job)
+			cron_id = @@rscheduler.cron job.cron_input do
+				begin
+					# Run the command, but puts for now
+					puts job.command
+					JobHistory.create(success: true, job_id: job.id)
+				rescue
+					JobHistory.create(success: false, job_id: job.id)
+				end
+			end
+			return cron_id
+
 		#rescue false # in case of bad cron inputs
 	end
 
@@ -25,6 +30,9 @@ class JobScheduler
 		if !cron_job.nil?
 			@@rscheduler.unschedule(job.rufus_id)
 			cron_job.kill
+		else
+			puts "Could not find cron job"
 		end
 	end
+
 end
