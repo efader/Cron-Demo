@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @history.each do |past_job| %>
+    <% @history.reverse.each do |past_job| %>
       <% job = Job.find(past_job.job_id) %>
     <tr>
       <td><%= job.title %></td>

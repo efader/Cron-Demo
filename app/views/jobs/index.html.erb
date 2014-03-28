@@ -13,6 +13,7 @@
 
   <tbody>
     <% @jobs.each do |job| %>
+    <% if job.active %>
     <tr>
       <td><%= job.title %></td>
       <td><%= job.command %></td>
@@ -20,6 +21,7 @@
       <td><%= button_to 'Show', job , class: "btn btn-sm" %></td>
       <td><%= button_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm"%></td>
     </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>

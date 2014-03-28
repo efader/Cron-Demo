@@ -20,13 +20,22 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params, active: true)
+    @job = Job.new(job_params)
+    @job.update(active: true)
+
     respond_to do |format|
-      if !(rufus_id = JobScheduler.schedule(@job.title, @job.command, @job.cron_input)).nil? && @job.save
-        @job.update(rufus_id: rufus_id)
-        format.html { redirect_to @job, notice: 'Job was successfully scheduled.' }
-        format.json { render action: 'show', status: :created, location: @job }
+      if @job.save
+        if !(rufus_id = JobScheduler.schedule(@job.title, @job.command, @job.cron_input)).nil? 
+          @job.update(rufus_id: rufus_id)
+          format.html { redirect_to @job, notice: 'Job was successfully scheduled.' }
+          format.json { render action: 'show', status: :created, location: @job }
+        else
+          @job.destroy
+          format.html { render action: 'new' }
+          format.json { render json: @job.errors, status: :unprocessable_entity }
+        end
       else
+
         format.html { render action: 'new' }
         format.json { render json: @job.errors, status: :unprocessable_entity }
       end
@@ -51,7 +60,6 @@ class JobsController < ApplicationController
   # DELETE /jobs/1.json
   def destroy
     JobScheduler.unschedule(@job)
-    @job.destroy
     respond_to do |format|
       format.html { redirect_to jobs_url }
       format.json { head :no_content }

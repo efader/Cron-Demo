@@ -20,6 +20,7 @@ class JobScheduler
 	# unschedule the job associated with this database entry
 	# make sure to call this before destroy!
 	def self.unschedule(job)
+		job.update(active: false)
 		cron_job = @@rscheduler.job(job.rufus_id)
 		if !cron_job.nil?
 			@@rscheduler.unschedule(job.rufus_id)
