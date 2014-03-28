@@ -45,8 +45,8 @@ class JobsController < ApplicationController
         if !(rufus_id = JobScheduler.schedule(@job)).nil? 
           @job.update(rufus_id: rufus_id)
           @job.update(active: true)
-          format.html { redirect_to @job, notice: 'Job was successfully scheduled.' }
-          format.json { render action: 'show', status: :created, location: @job }
+          format.html { redirect_to "/jobs", notice: 'Job was successfully scheduled.' }
+          format.json { render action: 'index', status: :created, location: @job }
         else
           @job.destroy
           format.html { render action: 'new' }
@@ -89,6 +89,7 @@ class JobsController < ApplicationController
   end
 
   def clear_history
+    JobHistory.delete_all
     redirect_to "/history"
   end
 

@@ -18,7 +18,7 @@
       <td><%= job.command %></td>
       <td><%= job.next_time %></td>
       <td><%= job.cron_input %></td>
-      <td><%= button_to 'Restart', {controller: "jobs", action: "restart", job: job}, class: "btn btn-sm"%></td>
+      <td><%= button_to 'Restart', {controller: "jobs", action: "restart", job: job}, class: "btn btn-sm btn-default"%></td>
     </tr>
     <% end %>
   </tbody>
