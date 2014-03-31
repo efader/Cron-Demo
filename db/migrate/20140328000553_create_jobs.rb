@@ -7,6 +7,7 @@ class CreateJobs < ActiveRecord::Migration
       t.string :rufus_id
       t.boolean :active
       t.string :next_time
+      t.integer :times_to_run
 
       t.timestamps
     end

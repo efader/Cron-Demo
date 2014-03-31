@@ -9,11 +9,18 @@ class JobScheduler
 	# link the job to the rufus_id using the return
 	def self.schedule(job)
 		begin # the controller will delete the object if this returns nil
-			cron_id = @@rscheduler.cron job.cron_input do
+			cron_id = @@rscheduler.cron job.cron_input, times: job.times_to_run do
 				begin # the only reason this should be false is an error, right?
 					# Run the command, but puts for now
 					puts job.command
 					job.update(next_time: find_next(cron_id))
+
+					if !job.times_to_run.nil? # update the remaining number of runs for those that are finite runs
+						job.update(times_to_run: job.times_to_run - 1)
+						if job.times_to_run <= 0
+							job.update(active: false)
+						end
+					end
 					JobHistory.create(success: true, job_id: job.id)
 				rescue
 					JobHistory.create(success: false, job_id: job.id)

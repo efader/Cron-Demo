@@ -6,6 +6,7 @@
       <th>Title</th>
       <th>Command</th>
       <th>Next Run</th>
+      <th>Times to Run</th>
       <th>Cron Input</th>
       <th></th>
     </tr>
@@ -17,6 +18,7 @@
       <td><%= job.title %></td>
       <td><%= job.command %></td>
       <td><%= job.next_time %></td>
+      <td><%= job.times_to_run || "(unlimited)" %></td>
       <td><%= job.cron_input %></td>
       <td><%= button_to 'Cancel', job, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-sm btn-default"%></td>
     </tr>

@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20140328000736) do
     t.string   "rufus_id"
     t.boolean  "active"
     t.string   "next_time"
+    t.integer  "times_to_run"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
