@@ -1,0 +1,1550 @@
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#history as HTML
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_jobs_history_html_erb___3041686393275003218_22905580 at /home/evan/Desktop/market76proj/Cron-Demo/app/views/jobs/history.html.erb:7)
+  [1m[35mJobHistory Load (0.6ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  Rendered jobs/history.html.erb within layouts/application (37.3ms)
+  Rendered layouts/_nav_bar.html.erb (2.5ms)
+Completed 200 OK in 136ms (Views: 107.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:31:59 -0400
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-31 19:32:02 -0400
+Processing by JobsController#history as HTML
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_jobs_history_html_erb___3041686393275003218_13264940 at /home/evan/Desktop/market76proj/Cron-Demo/app/views/jobs/history.html.erb:7)
+  [1m[35mJobHistory Load (0.7ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  Rendered jobs/history.html.erb within layouts/application (23.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.7ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:32:03 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/jobs/3" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "id"=>"3"}
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'Job1' AND `jobs`.`id` != 3) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `active` = 0, `updated_at` = '2014-03-31 23:32:09' WHERE `jobs`.`id` = 3
+  [1m[36m (77.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 101ms (ActiveRecord: 79.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1
+  Rendered jobs/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:09 -0400
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (13.5ms)
+  Rendered jobs/new.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:10 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"corn", "command"=>"corn", "cron_input"=>"* * * * *", "times_to_run"=>""}, "commit"=>"Create Job"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'corn' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('corn', '2014-03-31 23:32:19', '* * * * *', 'corn', '2014-03-31 23:32:19')[0m
+  [1m[35m (95.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:33:00', `updated_at` = '2014-03-31 23:32:19' WHERE `jobs`.`id` = 4[0m
+  [1m[35m (45.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396308739.125753_2347840443131843369', `updated_at` = '2014-03-31 23:32:19' WHERE `jobs`.`id` = 4[0m
+  [1m[35m (35.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-31 23:32:19' WHERE `jobs`.`id` = 4[0m
+  [1m[35m (34.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 241ms (ActiveRecord: 216.4ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1[0m
+  Rendered jobs/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 12.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:19 -0400
+
+
+Started POST "/jobs/new" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+Processing by JobsController#new as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI="}
+  Rendered jobs/_form.html.erb (4.4ms)
+  Rendered jobs/new.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:21 -0400
+
+
+Started POST "/jobs" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>{"title"=>"spork", "command"=>"spork", "cron_input"=>"* * * * *", "times_to_run"=>""}, "commit"=>"Create Job"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE `jobs`.`title` = BINARY 'spork' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `jobs` (`command`, `created_at`, `cron_input`, `title`, `updated_at`) VALUES ('spork', '2014-03-31 23:32:27', '* * * * *', 'spork', '2014-03-31 23:32:27')
+  [1m[36m (119.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:33:00', `updated_at` = '2014-03-31 23:32:27' WHERE `jobs`.`id` = 5
+  [1m[36m (91.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mJob Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396308747.3754678_2347840443131843369', `updated_at` = '2014-03-31 23:32:27' WHERE `jobs`.`id` = 5
+  [1m[36m (36.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-31 23:32:27' WHERE `jobs`.`id` = 5
+  [1m[36m (39.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 310ms (ActiveRecord: 290.3ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1
+  Rendered jobs/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:32:27 -0400
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (1.0ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:34:00', `updated_at` = '2014-03-31 23:33:00' WHERE `jobs`.`id` = 4[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:34:00', `updated_at` = '2014-03-31 23:33:00' WHERE `jobs`.`id` = 5
+  [1m[36m (38.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:33:00', 4, 1, '2014-03-31 23:33:00')[0m
+  [1m[35m (61.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:33:00', 5, 1, '2014-03-31 23:33:00')
+  [1m[36m (70.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (87.8ms)[0m  COMMIT
+  [1m[36m (1.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (2.6ms)[0m  BEGIN
+  [1m[36mJob Exists (2.6ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1[0m
+  [1m[35mJob Exists (2.2ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:35:00', `updated_at` = '2014-03-31 23:34:00' WHERE `jobs`.`id` = 4[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:35:00', `updated_at` = '2014-03-31 23:34:00' WHERE `jobs`.`id` = 5
+  [1m[36m (39.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:34:00', 4, 1, '2014-03-31 23:34:00')[0m
+  [1m[35m (80.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:34:00', 5, 1, '2014-03-31 23:34:00')
+  [1m[36m (79.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (81.5ms)[0m  COMMIT
+
+
+Started DELETE "/jobs/4" for 127.0.0.1 at 2014-03-31 19:34:04 -0400
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "id"=>"4"}
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `active` = 0, `updated_at` = '2014-03-31 23:34:04' WHERE `jobs`.`id` = 4
+  [1m[36m (46.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 62ms (ActiveRecord: 49.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1
+  Rendered jobs/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:34:05 -0400
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:36:00', `updated_at` = '2014-03-31 23:35:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (39.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:35:00', 5, 1, '2014-03-31 23:35:00')
+  [1m[36m (45.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-31 19:35:08 -0400
+Processing by JobsController#history as HTML
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_jobs_history_html_erb___3041686393275003218_13264940 at /home/evan/Desktop/market76proj/Cron-Demo/app/views/jobs/history.html.erb:7)
+  [1m[35mJobHistory Load (0.4ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  Rendered jobs/history.html.erb within layouts/application (25.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/inactive" for 127.0.0.1 at 2014-03-31 19:35:11 -0400
+Processing by JobsController#inactive as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from inactive at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:22)
+  [1m[36mJob Load (0.9ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 0[0m
+  Rendered jobs/inactive.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 18.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:35:13 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1
+  Rendered jobs/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/jobs/5" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+Processing by JobsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "id"=>"5"}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `jobs` SET `active` = 0, `updated_at` = '2014-03-31 23:35:18' WHERE `jobs`.`id` = 5
+  [1m[36m (56.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/jobs
+Completed 302 Found in 64ms (ActiveRecord: 57.8ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1
+  Rendered jobs/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:18 -0400
+
+
+Started GET "/inactive" for 127.0.0.1 at 2014-03-31 19:35:19 -0400
+Processing by JobsController#inactive as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from inactive at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:22)
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 0[0m
+  Rendered jobs/inactive.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/restart?job=4" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+Processing by JobsController#restart as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>"4"}
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.3ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:36:00', `updated_at` = '2014-03-31 23:35:27' WHERE `jobs`.`id` = 4[0m
+  [1m[35m (44.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-31 23:35:27' WHERE `jobs`.`id` = 4[0m
+  [1m[35m (37.8ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396308927.1101134_2347840443131843369', `updated_at` = '2014-03-31 23:35:27' WHERE `jobs`.`id` = 4[0m
+  [1m[35m (62.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/inactive
+Completed 302 Found in 160ms (ActiveRecord: 148.4ms)
+
+
+Started GET "/inactive" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+Processing by JobsController#inactive as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from inactive at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:22)
+  [1m[36mJob Load (0.8ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 0[0m
+  Rendered jobs/inactive.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:27 -0400
+
+
+Started POST "/restart?job=1" for 127.0.0.1 at 2014-03-31 19:35:30 -0400
+Processing by JobsController#restart as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>"1"}
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.4ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:36:00', `updated_at` = '2014-03-31 23:35:30' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (52.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-31 23:35:30' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (44.3ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.7ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'monkey' AND `jobs`.`id` != 1) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `rufus_id` = 'cron_1396308930.6453161_400631068484258581', `updated_at` = '2014-03-31 23:35:30' WHERE `jobs`.`id` = 1[0m
+  [1m[35m (44.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/inactive
+Completed 302 Found in 160ms (ActiveRecord: 144.5ms)
+
+
+Started GET "/inactive" for 127.0.0.1 at 2014-03-31 19:35:30 -0400
+Processing by JobsController#inactive as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from inactive at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:22)
+  [1m[36mJob Load (0.8ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 0[0m
+  Rendered jobs/inactive.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:35:31 -0400
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-31 19:35:33 -0400
+Processing by JobsController#history as HTML
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_jobs_history_html_erb___3041686393275003218_13264940 at /home/evan/Desktop/market76proj/Cron-Demo/app/views/jobs/history.html.erb:7)
+  [1m[35mJobHistory Load (0.4ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  Rendered jobs/history.html.erb within layouts/application (22.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:35:34 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1[0m
+  Rendered jobs/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mJob Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:37:00', `updated_at` = '2014-03-31 23:36:00' WHERE `jobs`.`id` = 4
+  [1m[36m (44.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:36:00', 4, 1, '2014-03-31 23:36:00')[0m
+  [1m[35m (45.5ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (0.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:38:00', `updated_at` = '2014-03-31 23:37:00' WHERE `jobs`.`id` = 4[0m
+  [1m[35m (38.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:37:00', 4, 1, '2014-03-31 23:37:00')
+  [1m[36m (47.3ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-31 19:37:05 -0400
+Processing by JobsController#history as HTML
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_jobs_history_html_erb___3041686393275003218_13264940 at /home/evan/Desktop/market76proj/Cron-Demo/app/views/jobs/history.html.erb:7)
+  [1m[35mJobHistory Load (0.4ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mJob Load (0.3ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  Rendered jobs/history.html.erb within layouts/application (28.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 34.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:37:21 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/inactive" for 127.0.0.1 at 2014-03-31 19:37:26 -0400
+Processing by JobsController#inactive as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from inactive at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:22)
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 0
+  Rendered jobs/inactive.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:37:27 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1[0m
+  Rendered jobs/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-31 19:37:28 -0400
+Processing by JobsController#history as HTML
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_jobs_history_html_erb___3041686393275003218_13264940 at /home/evan/Desktop/market76proj/Cron-Demo/app/views/jobs/history.html.erb:7)
+  [1m[35mJobHistory Load (0.3ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.3ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  Rendered jobs/history.html.erb within layouts/application (26.5ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:37:31 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1[0m
+  Rendered jobs/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.3ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/inactive" for 127.0.0.1 at 2014-03-31 19:37:35 -0400
+Processing by JobsController#inactive as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from inactive at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:22)
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 0
+  Rendered jobs/inactive.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/restart?job=5" for 127.0.0.1 at 2014-03-31 19:37:38 -0400
+Processing by JobsController#restart as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>"5"}
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:38:00', `updated_at` = '2014-03-31 23:37:38' WHERE `jobs`.`id` = 5
+  [1m[36m (51.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mJob Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-31 23:37:38' WHERE `jobs`.`id` = 5
+  [1m[36m (43.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396309058.778511_2347840443131843369', `updated_at` = '2014-03-31 23:37:38' WHERE `jobs`.`id` = 5
+  [1m[36m (35.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/inactive
+Completed 302 Found in 152ms (ActiveRecord: 135.3ms)
+
+
+Started GET "/inactive" for 127.0.0.1 at 2014-03-31 19:37:38 -0400
+Processing by JobsController#inactive as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from inactive at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:22)
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 0
+  Rendered jobs/inactive.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:39 -0400
+
+
+Started POST "/restart?job=2" for 127.0.0.1 at 2014-03-31 19:37:41 -0400
+Processing by JobsController#restart as HTML
+  Parameters: {"authenticity_token"=>"Y9t9B+t/L0UL3tVSEJUaoyOG6u33K0p1M7s05Su8fVI=", "job"=>"2"}
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:38:00', `updated_at` = '2014-03-31 23:37:41' WHERE `jobs`.`id` = 2
+  [1m[36m (38.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mJob Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `jobs` SET `active` = 1, `updated_at` = '2014-03-31 23:37:41' WHERE `jobs`.`id` = 2
+  [1m[36m (45.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'walrus' AND `jobs`.`id` != 2) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE `jobs` SET `rufus_id` = 'cron_1396309061.7560325_400631068484258581', `updated_at` = '2014-03-31 23:37:41' WHERE `jobs`.`id` = 2
+  [1m[36m (46.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/inactive
+Completed 302 Found in 147ms (ActiveRecord: 133.6ms)
+
+
+Started GET "/inactive" for 127.0.0.1 at 2014-03-31 19:37:41 -0400
+Processing by JobsController#inactive as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from inactive at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:22)
+  [1m[35mJob Load (0.6ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 0
+  Rendered jobs/inactive.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-31 19:37:42 -0400
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-03-31 19:37:43 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (1.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.6ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.3ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:39:00', `updated_at` = '2014-03-31 23:38:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:39:00', `updated_at` = '2014-03-31 23:38:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (73.0ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:38:00', 4, 1, '2014-03-31 23:38:00')
+  [1m[36m (113.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:38:00', 5, 1, '2014-03-31 23:38:00')[0m
+  [1m[35m (78.7ms)[0m  COMMIT
+  [1m[36m (80.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  BEGIN
+  [1m[36m (2.5ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.2ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.2ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:40:00', `updated_at` = '2014-03-31 23:39:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:40:00', `updated_at` = '2014-03-31 23:39:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (37.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:39:00', 4, 1, '2014-03-31 23:39:00')
+  [1m[36m (78.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:39:00', 5, 1, '2014-03-31 23:39:00')[0m
+  [1m[35m (79.4ms)[0m  COMMIT
+  [1m[36m (78.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.1ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.2ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (2.0ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:41:00', `updated_at` = '2014-03-31 23:40:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:41:00', `updated_at` = '2014-03-31 23:40:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (49.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:40:00', 4, 1, '2014-03-31 23:40:00')
+  [1m[36m (90.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:40:00', 5, 1, '2014-03-31 23:40:00')[0m
+  [1m[35m (79.4ms)[0m  COMMIT
+  [1m[36m (79.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.8ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (2.6ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:42:00', `updated_at` = '2014-03-31 23:41:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:42:00', `updated_at` = '2014-03-31 23:41:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (41.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:41:00', 4, 1, '2014-03-31 23:41:00')
+  [1m[36m (81.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:41:00', 5, 1, '2014-03-31 23:41:00')[0m
+  [1m[35m (79.6ms)[0m  COMMIT
+  [1m[36m (79.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (1.7ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.0ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:43:00', `updated_at` = '2014-03-31 23:42:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:43:00', `updated_at` = '2014-03-31 23:42:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (36.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:42:00', 4, 1, '2014-03-31 23:42:00')
+  [1m[36m (78.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:42:00', 5, 1, '2014-03-31 23:42:00')[0m
+  [1m[35m (81.6ms)[0m  COMMIT
+  [1m[36m (79.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (7.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (3.3ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (3.1ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:44:00', `updated_at` = '2014-03-31 23:43:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:44:00', `updated_at` = '2014-03-31 23:43:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (85.3ms)[0m  COMMIT
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:43:00', 4, 1, '2014-03-31 23:43:00')
+  [1m[36m (116.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:43:00', 5, 1, '2014-03-31 23:43:00')[0m
+  [1m[35m (87.2ms)[0m  COMMIT
+  [1m[36m (100.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.1ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:45:00', `updated_at` = '2014-03-31 23:44:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:45:00', `updated_at` = '2014-03-31 23:44:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (43.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:44:00', 4, 1, '2014-03-31 23:44:00')
+  [1m[36m (85.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:44:00', 5, 1, '2014-03-31 23:44:00')[0m
+  [1m[35m (79.0ms)[0m  COMMIT
+  [1m[36m (79.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.1ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.5ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:46:00', `updated_at` = '2014-03-31 23:45:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:46:00', `updated_at` = '2014-03-31 23:45:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (42.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:45:00', 4, 1, '2014-03-31 23:45:00')
+  [1m[36m (83.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:45:00', 5, 1, '2014-03-31 23:45:00')[0m
+  [1m[35m (78.4ms)[0m  COMMIT
+  [1m[36m (79.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.2ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.4ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:47:00', `updated_at` = '2014-03-31 23:46:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:47:00', `updated_at` = '2014-03-31 23:46:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (48.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:46:00', 4, 1, '2014-03-31 23:46:00')
+  [1m[36m (80.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:46:00', 5, 1, '2014-03-31 23:46:00')[0m
+  [1m[35m (69.0ms)[0m  COMMIT
+  [1m[36m (70.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.2ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.2ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (1.8ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:48:00', `updated_at` = '2014-03-31 23:47:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:48:00', `updated_at` = '2014-03-31 23:47:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (44.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:47:00', 4, 1, '2014-03-31 23:47:00')
+  [1m[36m (86.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:47:00', 5, 1, '2014-03-31 23:47:00')[0m
+  [1m[35m (80.8ms)[0m  COMMIT
+  [1m[36m (80.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (1.9ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.4ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:49:00', `updated_at` = '2014-03-31 23:48:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:49:00', `updated_at` = '2014-03-31 23:48:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (75.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:48:00', 4, 1, '2014-03-31 23:48:00')
+  [1m[36m (117.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:48:00', 5, 1, '2014-03-31 23:48:00')[0m
+  [1m[35m (79.6ms)[0m  COMMIT
+  [1m[36m (80.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mJob Exists (2.1ms)[0m  SELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'corn' AND `jobs`.`id` != 4) LIMIT 1
+  [1m[36mJob Exists (2.3ms)[0m  [1mSELECT 1 AS one FROM `jobs` WHERE (`jobs`.`title` = BINARY 'spork' AND `jobs`.`id` != 5) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE `jobs` SET `next_time` = '2014-03-31 23:50:00', `updated_at` = '2014-03-31 23:49:00' WHERE `jobs`.`id` = 4
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE `jobs` SET `next_time` = '2014-03-31 23:50:00', `updated_at` = '2014-03-31 23:49:00' WHERE `jobs`.`id` = 5[0m
+  [1m[35m (46.8ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:49:00', 4, 1, '2014-03-31 23:49:00')
+  [1m[36m (78.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `job_histories` (`created_at`, `job_id`, `success`, `updated_at`) VALUES ('2014-03-31 23:49:00', 5, 1, '2014-03-31 23:49:00')[0m
+  [1m[35m (62.0ms)[0m  COMMIT
+  [1m[36m (71.9ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-31 19:49:27 -0400
+Processing by JobsController#history as HTML
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_jobs_history_html_erb___3041686393275003218_13264940 at /home/evan/Desktop/market76proj/Cron-Demo/app/views/jobs/history.html.erb:7)
+  [1m[35mJobHistory Load (0.4ms)[0m  SELECT `job_histories`.* FROM `job_histories`
+  [1m[36mJob Load (0.4ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mJob Load (0.5ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  Rendered jobs/history.html.erb within layouts/application (35.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/history" for 127.0.0.1 at 2014-03-31 19:49:31 -0400
+Processing by JobsController#history as HTML
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.1. Use 'data: { confirm: 'Text' }' instead. (called from _app_views_jobs_history_html_erb___3041686393275003218_13264940 at /home/evan/Desktop/market76proj/Cron-Demo/app/views/jobs/history.html.erb:7)
+  [1m[36mJobHistory Load (1.0ms)[0m  [1mSELECT `job_histories`.* FROM `job_histories`[0m
+  [1m[35mJob Load (0.7ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1
+  [1m[36mJob Load (0.6ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 5 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 4 LIMIT 1  [["id", 4]]
+  [1m[36mJob Load (0.7ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 2 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `jobs`.* FROM `jobs` WHERE `jobs`.`id` = 3 LIMIT 1[0m  [["id", 3]]
+  Rendered jobs/history.html.erb within layouts/application (47.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 51.8ms | ActiveRecord: 5.0ms)
+  [1m[36m (122.4ms)[0m  [1mDROP DATABASE IF EXISTS `cron-demo_development`[0m
+  [1m[35m (1.0ms)[0m  DROP DATABASE IF EXISTS `cron-demo_test`
+  [1m[36m (0.6ms)[0m  [1mCREATE DATABASE `cron-demo_development` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`[0m
+  [1m[35m (0.5ms)[0m  CREATE DATABASE `cron-demo_test` DEFAULT CHARACTER SET `utf8` COLLATE `utf8_unicode_ci`
+  [1m[36m (115.6ms)[0m  [1mCREATE TABLE `job_histories` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `success` tinyint(1), `job_id` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [1m[35m (99.8ms)[0m  CREATE TABLE `jobs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `command` varchar(255), `cron_input` varchar(255), `rufus_id` varchar(255), `active` tinyint(1), `next_time` varchar(255), `times_to_run` int(11), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (96.6ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (183.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`) 
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM `schema_migrations`[0m
+  [1m[35m (40.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20140328000736')
+  [1m[36m (41.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20140328000553')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 09:47:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/evan/.rvm/gems/ruby-2.1.0/gems/railties-4.0.4/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 85ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs" for 127.0.0.1 at 2014-04-01 09:47:12 -0400
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[35mJob Load (0.4ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1
+  Rendered jobs/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_nav_bar.html.erb (1.0ms)
+Completed 200 OK in 566ms (Views: 453.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 09:47:13 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-01 10:37:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by JobsController#index as HTML
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /home/evan/Desktop/market76proj/Cron-Demo/app/controllers/jobs_controller.rb:7)
+  [1m[35mJob Load (0.5ms)[0m  SELECT `jobs`.* FROM `jobs` WHERE `jobs`.`active` = 1
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_nav_bar.html.erb (0.7ms)
+Completed 200 OK in 109ms (Views: 79.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/bootstrap-theme.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.css.map.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/bootstrap-theme.min.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/bootstrap.css.map.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/jobs.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/jobs.js?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-01 10:37:49 -0400

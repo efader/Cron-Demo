@@ -1,6 +1,7 @@
 CronDemo::Application.routes.draw do
   resources :jobs
 
+  root "jobs#index"
   get "/history" => "jobs#history"
   post "jobs/new"
   post "/restart" => "jobs#restart"
